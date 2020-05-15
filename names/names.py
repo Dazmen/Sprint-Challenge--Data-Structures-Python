@@ -54,3 +54,19 @@ print (f"runtime: {end_time - start_time} seconds")
 # Python has built-in tools that allow for a very efficient approach to this problem
 # What's the best time you can accomplish?  Thare are no restrictions on techniques or data
 # structures, but you may not import any additional libraries that you did not write yourself.
+
+###### --- STRETCH --- ######
+
+# hash table (dict and set) has the best search time complexities
+stretch_time = time.time()
+
+names_set = set(names_1)
+stretch_dups = []
+
+for name in names_2:
+    if name in names_set:
+        stretch_dups.append(name)
+
+end_stretch_time = time.time()
+print (f"\n\n{len(stretch_dups)} Stretch-dups:\n\n{', '.join(duplicates)}\n\n")
+print (f"Stretch_runtime: {end_stretch_time - stretch_time} seconds")
